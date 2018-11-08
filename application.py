@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 @app.route("/", methods=['POST'])
 def hello():
-    return 'post request success'
+    data = request.data
+    return data
