@@ -9,6 +9,7 @@ def hello():
     data = request.data
     dataDict = json.loads(data)
     x = int(dataDict['key']) * int(dataDict['key'])
-    r = requests.get("https://www.google.com")
+    r = requests.get("https://fantasy.premierleague.com/drf/elements/")
+    r = r.json()
     #return str(x)
     return str(r)
