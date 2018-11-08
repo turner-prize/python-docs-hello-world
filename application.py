@@ -7,4 +7,5 @@ app = Flask(__name__)
 def hello():
     data = request.data
     dataDict = json.loads(data)
-    return int(dataDict['key']) * int(dataDict['key'])
+    x = int(dataDict['key']) * int(dataDict['key'])
+    return str(x)
