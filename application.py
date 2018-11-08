@@ -9,4 +9,5 @@ def hello():
     data = request.data
     dataDict = json.loads(data)
     x = int(dataDict['key']) * int(dataDict['key'])
+    r = requests.get("https://www.google.com")
     return str(x)
